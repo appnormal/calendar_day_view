@@ -64,7 +64,7 @@ class CalendarGestureDetector {
 
     _dragGestureRecognizer = VerticalDragGestureRecognizer(debugOwner: this)
       ..onDown = (details) {
-        if (onChildHit?.call(details.localPosition) != true) {
+        if (onChildHit?.call(details.localPosition) ?? false) {
           return;
         }
 
@@ -79,7 +79,7 @@ class CalendarGestureDetector {
         onVerticalDragEnd?.call(lastPointer!.dy);
       }
       ..onUpdate = (details) {
-        if (onChildHit?.call(details.localPosition) != true) {
+        if (onChildHit?.call(details.localPosition) ?? false) {
           return;
         }
 

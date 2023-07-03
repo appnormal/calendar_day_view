@@ -1,8 +1,4 @@
-## 0.0.7
-
-* Fix dragging existing items (broken in 0.0.6)
-
-## 0.0.6
+## 0.1.0
 
 * Allow to be used in a scroll view (iOS bugfix)
 
