@@ -222,6 +222,13 @@ class RenderDayItemWidget<T> extends RenderBox with RenderObjectWithChildMixin<R
     if (data.canDragItem?.call(_item as T) == false) return;
 
     data.draggable = !data.draggable;
+
+    if (data.draggable) {
+      _gestureDetector?.startDragging();
+    } else {
+      _gestureDetector?.stopDragging();
+    }
+
     markNeedsPaint();
     markParentCountDraggables();
   }
